@@ -1,0 +1,207 @@
+/*---------------------------*\
+        CSS Main
+\*---------------------------*/
+
+body{
+  background-image: url("https://c1.staticflickr.com/4/3838/14807096200_cd64188ffc_k.jpg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-family: helvetica, sans-serif;
+}
+
+.c-layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3vh 2vw;
+}
+
+.c-layout__title {
+  align-items: center;
+  display: flex;
+  font-size: 1.3em;
+  justify-content: flex-end;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+
+
+
+
+/*---------------------------*\
+        box.css
+\*---------------------------*/
+
+.c-box {
+  margin-bottom: 1vw;
+  margin-right: 1vw;
+  min-height: 20vh;
+  --box_width: 14vw;
+}
+
+.c-box:nth-of-type(n+1) {
+  flex: 1 1 calc(1 * var(--box_width));
+}
+
+.c-box:nth-of-type(8),
+.c-box:nth-of-type(52) {
+  flex: 2 2 calc(2 * var(--box_width));
+}
+
+.c-box:nth-of-type(6),
+.c-box:nth-of-type(9),
+.c-box:nth-of-type(16),
+.c-box:nth-of-type(21),
+.c-box:nth-of-type(26),
+.c-box:nth-of-type(29),
+.c-box:nth-of-type(34),
+.c-box:nth-of-type(38),
+.c-box:nth-of-type(45),
+.c-box:nth-of-type(49),
+.c-box:nth-of-type(55) {
+  background-color: #D4759F;
+  border-radius: 5px;
+  display: flex;
+  flex: 1 1 calc(1 * var(--box_width));
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.c-box:nth-of-type(60) {
+  flex: 1 1 calc(6 * var(--box_width));
+}
+
+.c-box:nth-of-type(61) {
+  flex: 1 1 calc(2 * var(--box_width));
+}
+
+.c-box:nth-of-type(62) {
+  flex: 1 1 calc(4 * var(--box_width));
+}
+
+@media screen and (max-width: 700px) {
+  
+  .c-layout {
+    align-items: flex-start;
+    flex-direction: column;
+    height: initial;
+  }
+  
+  .c-box {
+    display: none;
+  }
+
+  .c-box:nth-of-type(8) {
+    order: -1;
+  }
+
+  .c-box:nth-of-type(6),
+  .c-box:nth-of-type(8),
+  .c-box:nth-of-type(9),
+  .c-box:nth-of-type(16),
+  .c-box:nth-of-type(21),
+  .c-box:nth-of-type(26),
+  .c-box:nth-of-type(29),
+  .c-box:nth-of-type(34),
+  .c-box:nth-of-type(38),
+  .c-box:nth-of-type(45),
+  .c-box:nth-of-type(49),
+  .c-box:nth-of-type(55) {
+    display: flex;
+    flex: 0 0 auto;
+    margin: 0;
+    min-height: initial;
+  }
+}
+
+.c-box__title {
+  color: #FFD275;
+  font-size: 0.8em;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.c-box__content {
+  font-size: 0.7em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.c-box__footer {
+  color: #FFD275;
+  font-size: 0.7em;  
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.c-box__title_highlighted {
+  background-color: #D4759F;
+  color: #fff;
+  font-weight: bold;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-top: 3%;
+  text-transform: uppercase;
+}
+
+.c-box__content_highlighted {
+  display: block;
+  height: 50%;
+  padding-top: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*---------------------------*\
+        copyright.css
+\*---------------------------*/
+.c-copyright {
+  background-color: #D4759F;
+  border-radius: 5px;
+  display: inline-flex;
+  flex-direction: row;
+  height: 23px;
+  justify-items: flex-start;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.c-copyright__icon {
+  background: url(https://s.yimg.com/uy/build/images/sprites/scrappy-10271d4f.png) -71px -101px no-repeat;
+  flex: 0 0 22px;
+}
+
+.c-copyright__text {
+  background-color: #D4759F;
+  flex: 0 0 auto;
+  font-size: 0.9em;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/*------- CSS Main end -------*/
+/** { border: 1px solid red;}*/
+
+html { box-sizing: border-box;}
+
+*, *:before, *:after { box-sizing: inherit;}
+
+a {  color: inherit; }
+
+
+
+
+
+/*---------------------------*\
+        CSS Reset
+\*---------------------------*/
+body, div, a, h2, h3, p, span {
+  margin: 0;
+  padding: 0;
+	font-size: 100%;
+  font-weight: normal;
+}
