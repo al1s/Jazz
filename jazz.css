@@ -37,7 +37,7 @@ body{
 .c-box {
   margin-bottom: 1vw;
   margin-right: 1vw;
-  min-height: 20vh;
+  min-height: 14vw;
   --box_width: 14vw;
 }
 
@@ -155,9 +155,14 @@ body{
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+
+
+
+
 /*---------------------------*\
         copyright.css
 \*---------------------------*/
+
 .c-copyright {
   background-color: #D4759F;
   border-radius: 5px;
@@ -183,15 +188,6 @@ body{
   padding-right: 5px;
 }
 
-/*------- CSS Main end -------*/
-/** { border: 1px solid red;}*/
-
-html { box-sizing: border-box;}
-
-*, *:before, *:after { box-sizing: inherit;}
-
-a {  color: inherit; }
-
 
 
 
@@ -199,9 +195,18 @@ a {  color: inherit; }
 /*---------------------------*\
         CSS Reset
 \*---------------------------*/
+
+/** { border: 1px solid red;}*/
+
 body, div, a, h2, h3, p, span {
   margin: 0;
   padding: 0;
 	font-size: 100%;
   font-weight: normal;
 }
+
+html {box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit;}
+
+a {color: inherit;}
