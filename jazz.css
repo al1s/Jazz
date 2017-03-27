@@ -119,9 +119,9 @@ body{
 .c-box__title {
   color: #FFD275;
   font-size: 0.8em;
-  padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 10px;
 }
 
 .c-box__content {
@@ -168,24 +168,32 @@ body{
   border-radius: 5px;
   display: inline-flex;
   flex-direction: row;
-  height: 23px;
+  height: 24px;
   justify-items: flex-start;
   margin-left: 10px;
   margin-bottom: 10px;
-  
+  padding-bottom: 1px;
+  padding-left: 1px;
+  padding-top: 1px;
 }
 
 .c-copyright__icon {
-  background: url(https://s.yimg.com/uy/build/images/sprites/scrappy-10271d4f.png) -71px -101px no-repeat;
-  flex: 0 0 22px;
+  background-image: url(https://s.yimg.com/uy/build/images/sprites/scrappy-10271d4f.png);
+  background-position: -71px -101px;
+  background-repeat: no-repeat;
+  flex: 1 1 22px;
+}
+
+/*hack to prevent flex-inline collapsing when no content in inner box*/
+.c-copyright__icon::after {
+  content: "";
+  padding-left: 22px;
 }
 
 .c-copyright__text {
-  background-color: #D4759F;
   flex: 0 0 auto;
   font-size: 0.9em;
   padding-left: 5px;
-  padding-right: 5px;
 }
 
 
